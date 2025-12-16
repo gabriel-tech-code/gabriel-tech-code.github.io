@@ -25,7 +25,7 @@ const router = createBrowserRouter([
   { path: "/notes", element: <Notes /> },
 ],
 {
-  basename: "gabriel-tech-code.github.io",
+  basename: "/gabriel-tech-code.github.io",
 }
 );
 
