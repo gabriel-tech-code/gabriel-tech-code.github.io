@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import Home from "./pages/Home";
 
 // Tailwind pages
@@ -11,7 +11,7 @@ import Projects from "./pages/bootstrap/Projects";
 import Notes from "./pages/bootstrap/Notes";
 import WorkProjects from "./pages/bootstrap/WorkProjects";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   { path: "/", element: <Home /> },
 
   // Tailwind group

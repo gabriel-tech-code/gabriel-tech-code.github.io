@@ -1,4 +1,5 @@
 import "./home.css";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -7,16 +8,16 @@ export default function Home() {
 
       <div className="link-section">
         <h2>Tailwind Pages</h2>
-        <a href="/portfolio">Portfolio</a>
-        <a href="/resume">Resume</a>
-        <a href="/games">JavaScript Games</a>
+        <Link to="/portfolio">Portfolio</Link>
+        <Link to="/resume">Resume</Link>
+        <Link to="/games">JavaScript Games</Link>
       </div>
 
       <div className="link-section">
         <h2>Bootstrap Pages</h2>
-        <a href="/work-projects">Work Projects</a>
-        <a href="/my-projects">My Projects</a>
-        <a href="/notes">Notes</a>
+        <Link to="/work-projects">Work Projects</Link>
+        <Link to="/my-projects">My Projects</Link>
+        <Link to="/notes">Notes</Link>
       </div>
     </div>
   );
