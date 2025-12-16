@@ -23,6 +23,10 @@ const router = createBrowserRouter([
   { path: "/work-projects", element: <WorkProjects /> },
   { path: "/my-projects", element: <Projects /> },
   { path: "/notes", element: <Notes /> },
-]);
+],
+{
+  basename: "gabriel-tech-code.github.io",
+}
+);
 
 export default router;
