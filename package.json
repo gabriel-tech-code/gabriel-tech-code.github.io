@@ -1,5 +1,6 @@
 {
   "name": "gabriel-tech-code.github.io",
+  "homepage": "https://github.com/gabriel-tech-code/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -42,6 +43,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gabriel-tech-code/gabriel-tech-code.github.io/issues"
-  },
-  "homepage": "https://github.com/gabriel-tech-code/gabriel-tech-code.github.io#readme"
+  }
 }
