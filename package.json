@@ -8,8 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview","deploy": "gh-pages -d dist -r https://github.com/gabriel-tech-code/gabriel-tech-code.github.io.git"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.18",
