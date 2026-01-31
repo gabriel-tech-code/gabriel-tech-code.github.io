@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import RedBulb from '../assets/images/Red_Bulb.png'
 import CyanBulb from '../assets/images/Cyan_Bulb.png'
-import LeftArrow from '../assets/images/left_arrow.png'
-import RightArrow from '../assets/images/right_arrow.png'
+import LeftArrow from '../assets/images/Left_Arrow.png'
+import RightArrow from '../assets/images/Right_Arrow.png'
 
 const links = [
   { name: 'Home', path: '/' },
