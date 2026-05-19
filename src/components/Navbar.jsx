@@ -10,6 +10,9 @@ const links = [
   { name: 'Resume', path: '/resume' },
   { name: 'Portfolio', path: '/portfolio' },
   { name: 'Games', path: '/games' },
+  { name: 'Projects', path: '/projects' },
+  { name: 'Notes', path: '/notes' },
+  { name: 'Tools', path: '/tools' },
 ]
 
 export default function Navbar() {
