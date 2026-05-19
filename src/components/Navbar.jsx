@@ -2,9 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import RedBulb from '../assets/images/Red_Bulb.png'
 import CyanBulb from '../assets/images/Cyan_Bulb.png'
-import LeftArrow from '../assets/images/Left_Arrow.png'
-import RightArrow from '../assets/images/Right_Arrow.png'
-
+import {HiChevronLeft, HiChevronRight} from 'react-icons/hi'
 const links = [
   { name: 'Home', path: '/' },
   { name: 'Resume', path: '/resume' },
@@ -123,11 +121,10 @@ export default function Navbar() {
           <button
             onClick={() => scroll('left')}
             className={`px-2 py-1 transition rounded-md hover:opacity-80
-            ${theme === 'dark' ? 'bg-dark-bg text-dark-accent' : 'bg-light-bg text-light-accent'}`}aria-label="Scroll left"
-            >
-              
-            <img src={LeftArrow} alt="Scroll left" className="w-8 h-8" />
-            
+            ${theme === 'dark' ? 'text-cyan-400' : 'text-red-600'}`}
+            aria-label="Scroll left"
+          >
+            <HiChevronLeft className="w-8 h-8" />
           </button>
         )}
 
@@ -164,10 +161,11 @@ export default function Navbar() {
           <button
             onClick={() => scroll('right')}
             className={`px-2 py-1 transition rounded-md hover:opacity-80
-            ${ theme === 'dark' ? 'bg-dark-bg text-dark-accent' : 'bg-light-bg text-light-accent'}`} aria-label="Scroll right"
-            >
-              
-            <img src={RightArrow} alt="Scroll right" className="w-8 h-8" />
+            ${theme === 'dark' ? 'text-cyan-400' : 'text-red-600'}`}
+            aria-label="Scroll right"
+          >
+            <HiChevronRight className="w-8 h-8" />
+            
           </button>
         )}
                 
