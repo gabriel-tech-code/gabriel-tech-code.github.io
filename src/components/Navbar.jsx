@@ -20,6 +20,11 @@ export default function Navbar() {
   const [canScrollRight, setCanScrollRight] = useState(false)
   const [hasOverflow, setHasOverflow] = useState(false)
 
+  // Drag-to-scroll state
+  const isDragging = useRef(false)
+  const startX = useRef(0)
+  const scrollStart = useRef(0)
+  
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark')
     localStorage.setItem('theme', theme)
@@ -30,24 +35,40 @@ export default function Navbar() {
   }
 
  const updateScrollButtons = () => {
-  const el = scrollRef.current
-  if (!el) return
+    const el = scrollRef.current
+    if (!el) return
 
-  const { scrollLeft, scrollWidth, clientWidth } = el
-  const overflow = scrollWidth > clientWidth
+    const { scrollLeft, scrollWidth, clientWidth } = el
+    const overflow = scrollWidth > clientWidth
 
-  setHasOverflow(overflow)
-  setCanScrollLeft(overflow && scrollLeft > 0)
-  setCanScrollRight(
-    overflow && scrollLeft + clientWidth < scrollWidth - 1
-  )
-}
+    setHasOverflow(overflow)
+    setCanScrollLeft(overflow && scrollLeft > 0)
+    setCanScrollRight(
+      overflow && scrollLeft + clientWidth < scrollWidth - 1
+    )
+  }
 
   const scroll = (direction) => {
     scrollRef.current?.scrollBy({
       left: direction === 'left' ? -150 : 150,
       behavior: 'smooth',
     })
+  }
+  const onDragStart = (e) => {
+    isDragging.current = true
+    startX.current = e.pageX || e.touches[0].pageX
+    scrollStart.current = scrollRef.current.scrollLeft
+  }
+
+  const onDragMove = (e) => {
+    if (!isDragging.current) return
+    const x = e.pageX || e.touches[0].pageX
+    const walk = (x - startX.current) * -1 // reverse direction
+    scrollRef.current.scrollLeft = scrollStart.current + walk
+  }
+
+  const onDragEnd = () => {
+    isDragging.current = false
   }
 
   useEffect(() => {
@@ -56,14 +77,35 @@ export default function Navbar() {
 
     updateScrollButtons()
 
-    el.addEventListener('scroll', updateScrollButtons)
-
+    // Scroll + resize listeners
+    el.addEventListener("scroll", updateScrollButtons)
     const resizeObserver = new ResizeObserver(updateScrollButtons)
     resizeObserver.observe(el)
 
+    // Drag listeners
+    el.addEventListener("mousedown", onDragStart)
+    el.addEventListener("mousemove", onDragMove)
+    el.addEventListener("mouseup", onDragEnd)
+    el.addEventListener("mouseleave", onDragEnd)
+
+    // Touch listeners
+    el.addEventListener("touchstart", onDragStart)
+    el.addEventListener("touchmove", onDragMove)
+    el.addEventListener("touchend", onDragEnd)
+
+    // CLEANUP FUNCTION — this is what React calls when the component unmounts
     return () => {
-      el.removeEventListener('scroll', updateScrollButtons)
+      el.removeEventListener("scroll", updateScrollButtons)
       resizeObserver.disconnect()
+
+      el.removeEventListener("mousedown", onDragStart)
+      el.removeEventListener("mousemove", onDragMove)
+      el.removeEventListener("mouseup", onDragEnd)
+      el.removeEventListener("mouseleave", onDragEnd)
+
+      el.removeEventListener("touchstart", onDragStart)
+      el.removeEventListener("touchmove", onDragMove)
+      el.removeEventListener("touchend", onDragEnd)
     }
   }, [])
 
