@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import RedBulb from '../assets/images/Red_Bulb.png'
-import CyanBulb from '../assets/images/Cyan_Bulb.png'
-import {HiChevronLeft, HiChevronRight} from 'react-icons/hi'
+import {HiChevronLeft, HiChevronRight, HiMoon, HiSun} from 'react-icons/hi'
+
 const links = [
   { name: 'Home', path: '/' },
   { name: 'Resume', path: '/resume' },
@@ -171,13 +170,15 @@ export default function Navbar() {
                 
         {/* Theme Toggle */}
         <button
-          onClick={toggleTheme}
-          className="px-2 py-1 ml-2 text-sm rounded-md shrink-0 bg-zinc-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 hover:opacity-80"
-          aria-label="Toggle theme"
-        >
-          <img  src={theme === 'dark' ? RedBulb : CyanBulb}  
-          alt="Toggle theme" className="w-8 h-8 "
-          />
+            onClick={toggleTheme}
+            className="px-2 py-1 ml-2 rounded-md shrink-0 bg-zinc-200 dark:bg-zinc-800 hover:opacity-80"
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? (
+              <HiSun className="w-8 h-8 text-red-500" />
+            ) : (
+              <HiMoon className="w-8 h-8 text-cyan-400" />
+            )}
           
         </button>
 
