@@ -1,7 +1,7 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import BodyGrid from '../components/BodyGrid'
-import CyanLogo from '../assets/images/Cyan-Logo.png'
+import CyanLogo from '../assets/images/Cyan_Logo.png'
 
 export default function Home() {
   return (
