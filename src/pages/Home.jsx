@@ -26,7 +26,9 @@ export default function Home() {
           rows={1}
           cols={1}
           items={[
-            <p>Another section with different layout...</p>
+            <p className="text-zinc-800 dark:text-zinc-200">
+              This text is dark in light mode and light in dark mode.
+            </p>
           ]}
         />
 
