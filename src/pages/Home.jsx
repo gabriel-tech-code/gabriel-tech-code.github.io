@@ -12,7 +12,16 @@ export default function Home() {
           Home page content goes here.
         </p>
       </main>
-
+      <BodyGrid
+        rows={1}
+        cols={2}
+        items={[
+          <p className="text-zinc-700 dark:text-zinc-300">
+            This is a paragraph example. You can place any text here.
+          </p>,
+          <img src="/path/to/Cyan_Logo.png" className="w-full h-auto" />
+        ]}
+      />
       <Footer />
     </div>
   )
