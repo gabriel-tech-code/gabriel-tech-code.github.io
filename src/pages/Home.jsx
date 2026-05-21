@@ -17,7 +17,7 @@ export default function Home() {
           cols={2}
           items={[
             <p>Paragraph content here...</p>,
-            <img src="/assets/images/Cyan-Logo.png" />
+            <img src={CyanLogo} alt="Gabriel Tech Logo" className="hidden w-auto h-20 dark:block"/>
           ]}
         />
 
