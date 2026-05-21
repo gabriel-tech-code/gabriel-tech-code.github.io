@@ -2,6 +2,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import BodyGrid from '../components/BodyGrid'
 import CyanLogo from '../assets/images/Cyan_Logo.png'
+import TopicBock from '../components/TopicBock'
 
 export default function Home() {
   return (
@@ -16,15 +17,9 @@ export default function Home() {
           rows={1}
           cols={2}
           items={[
-            <div className="space-y-2">
-              <h2 className="text-xl font-bold text-red-600 underline dark:text-cyan-400">
-                Your Topic Title
-              </h2>
-
-              <p className="text-zinc-700 dark:text-zinc-300">
-                This is your paragraph example. It stays readable in both light and dark mode.
-              </p>
-            </div>,
+            <TopicBlock title="About Me">
+              I am a frontend developer who loves React and Tailwind.
+            </TopicBlock>,
             <img src={CyanLogo} alt="Gabriel Tech Logo"/>
           ]}
         />
