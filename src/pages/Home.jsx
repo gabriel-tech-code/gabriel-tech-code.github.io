@@ -16,8 +16,16 @@ export default function Home() {
           rows={1}
           cols={2}
           items={[
-            <p>Paragraph content here...</p>,
-            <img src={CyanLogo} alt="Gabriel Tech Logo" className="hidden w-auto h-20 dark:block"/>
+            <div className="space-y-2">
+              <h2 className="text-xl font-bold text-red-600 underline dark:text-cyan-400">
+                Your Topic Title
+              </h2>
+
+              <p className="text-zinc-700 dark:text-zinc-300">
+                This is your paragraph example. It stays readable in both light and dark mode.
+              </p>
+            </div>,
+            <img src={CyanLogo} alt="Gabriel Tech Logo"/>
           ]}
         />
 
