@@ -6,7 +6,7 @@ export default function MarkdownPage() {
   const { folder, file } = useParams();
   const [content, setContent] = useState("");
 
-  const url = `https://raw.githubusercontent.com/gabriel-tech-code/content/main/${folder}/${file}.md`;
+  const url = `https://raw.githubusercontent.com/gabriel-tech-code/content/${folder}/${file}.md`;
 
   useEffect(() => {
     fetch(url)
