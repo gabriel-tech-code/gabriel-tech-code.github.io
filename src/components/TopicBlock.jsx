@@ -1,7 +1,7 @@
 export default function TopicBlock({ title, children }) {
   return (
     <div className="space-y-2">
-      <h2 className="text-red-600 underline dark:text-cyan-400">
+      <h2 className="text-xl font-bold text-red-600 dark:text-cyan-400">
         {title}
       </h2>
 
