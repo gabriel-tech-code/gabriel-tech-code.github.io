@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
 import {marked} from 'marked';
 
 import Header from '../components/Header'
