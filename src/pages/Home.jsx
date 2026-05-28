@@ -32,12 +32,13 @@ export default function Home() {
             <TopicBlock title="Explore My Work and Learning">
               <p>Beyond this homepage, the site is organized into dedicated sections that highlight different aspects 
               of my development journey:</p>
-
-              <ul className="space-y-2 list-inside list-dis1c">
-                <li><strong>Projects</strong> — A collection of software builds, tools, and experiments that demonstrate my technical skills and problem‑solving approach.</li>  
-                <li><strong>Games</strong>  — Interactive prototypes and gameplay systems inspired by my background in game development.</li>  
-                <li><strong>Notes</strong> — My personal knowledge base, written in Markdown, covering topics from programming concepts to cybersecurity fundamentals.</li>
+              <br/>
+              <ul className="ml-6 space-y-2 list-disc list-inside">
+                <li><strong>Projects</strong> — software builds and experiments.</li>
+                <li><strong>Games</strong> — prototypes inspired by my game dev background.</li>
+                <li><strong>Notes</strong> — my personal knowledge base.</li>
               </ul>
+              <br/>
               <p>Each section grows over time as I continue learning, building, and refining my craft. This site is 
               both a showcase and a living archive of my progress.</p>
             </TopicBlock>
@@ -49,14 +50,14 @@ export default function Home() {
           cols={1}
           items={[
             <TopicBlock title="How This Site Was Built">
-              This website is powered by React and styled with Tailwind CSS, giving it a clean, responsive, and 
+              <p> This website is powered by <strong>React</strong> and styled with <strong>Tailwind CSS</strong>, giving it a clean, responsive, and 
               modern feel. All written content — including project descriptions, notes, and documentation — is 
-              stored as Markdown files in a separate GitHub repository and fetched dynamically at runtime.
-
-              The site is deployed through GitHub Pages, making updates fast and seamless. I designed it to be 
+              stored as Markdown files in a separate <strong>GitHub repository</strong> and fetched dynamically at runtime.</p>
+              <br/>
+              <p>The site is deployed through <strong>GitHub Pages</strong>, making updates fast and seamless. I designed it to be 
               modular, easy to maintain, and flexible enough to grow with my skills. The structure, layout, and 
-              overall polish were refined with help from Microsoft Copilot, making this project both a portfolio 
-              piece and a personal learning tool.
+              overall polish were refined with help from <strong>Microsoft Copilot</strong>, making this project both a portfolio 
+              piece and a personal learning tool.</p>
             </TopicBlock>
           ]}
         />
