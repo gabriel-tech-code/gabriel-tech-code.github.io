@@ -1,3 +1,5 @@
+import typography from '@tailwindcss/typography';
+
 export default {
   content: [
     "./index.html",
@@ -15,7 +17,24 @@ export default {
         'light-accent': '#FF2A2A',
         'light-text': '#111111',
       },
+
+      typography: {
+        DEFAULT: {
+          css: {
+            h1: { color: "#FF2A2A" }, // light-accent (red)
+            h2: { color: "#FF2A2A" },
+            h3: { color: "#FF2A2A" },
+          },
+        },
+        invert: {
+          css: {
+            h1: { color: "#00FFFF" }, // dark-accent (cyan)
+            h2: { color: "#00FFFF" },
+            h3: { color: "#00FFFF" },
+          },
+        },
+      },
     },
   },
-  plugins: [],
-}
+  plugins: [typography],
+};

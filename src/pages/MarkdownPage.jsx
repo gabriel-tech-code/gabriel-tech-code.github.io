@@ -27,11 +27,12 @@ export default function MarkdownPage() {
 
         <Header title="Gabriel Tech" subtitle="Frontend Developer · React · JavaScript"/>
 
-        <main className="flex-grow px-6 py-10 space-y-10">
+        <main className="flex-grow px-6 py-10 space-y-10 prose dark:prose-invert">
 
-        <ReactMarkdown>{content}</ReactMarkdown>
+          <ReactMarkdown>{content}</ReactMarkdown>
 
         </main>
+
         <Footer />
       </div>
     )
