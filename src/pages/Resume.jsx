@@ -27,10 +27,10 @@ export default function Resume() {
 
         <Header title="Welcome to My Resume" subtitle="Building, Learning, and Leveling Up"/>
 
-        <main className="flex-grow px-6 py-10 space-y-10 prose dark:prose-invert">
-          
-          <ReactMarkdown>{content}</ReactMarkdown>
-
+        <main className="flex justify-center flex-grow px-6 py-10">
+          <div className="w-full max-w-3xl prose dark:prose-invert">
+            <ReactMarkdown>{content}</ReactMarkdown>
+          </div>
         </main>
 
         <Footer />
