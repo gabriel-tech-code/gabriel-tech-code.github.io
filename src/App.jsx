@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import MarkdownPage from "./pages/MarkdownPage";
+
 import Home from "./pages/Home";
 import Games from "./pages/Games";
 import Portfolio from "./pages/Portfolio";
@@ -15,8 +15,6 @@ export default function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/resume" element={<Resume />} />
 
-        {/* dynamic route for markdown pages */}
-        <Route path="/content/:folder/:file" element={<MarkdownPage />} />
       </Routes>
     </div>
   );

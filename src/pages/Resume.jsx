@@ -1,19 +1,39 @@
+import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import BodyGrid from '../components/BodyGrid'
+import CyanLogo from '../assets/images/Cyan_Logo.png'
+import TopicBlock from '../components/TopicBlock'
 
 export default function Resume() {
-    return (
-        <div className="flex flex-col min-h-screen bg-zinc-100 dark:bg-zinc-950">
+  
 
-            <Header title="Gabriel Tech" subtitle="Frontend Developer · React · JavaScript"/>
+  const [content, setContent] = useState("");  
 
-            <main className="flex-grow px-6 py-10">
-                <p className="text-zinc-700 dark:text-zinc-300">
-                Resume page content goes here.
-                </p>
-            </main>
+  const url = `https://raw.githubusercontent.com/gabriel-tech-code/content/main/profiles/resume.md`;
 
-            <Footer />
-        </div>
+  useEffect(() => {
+    fetch(url)
+      .then(res => res.text())
+      .then(text => setContent(text))
+      .catch(() => setContent("# Error\nCould not load content."));
+  }, [url]);
+  
+  return (
+    
+      <div className="flex flex-col min-h-screen bg-zinc-100 dark:bg-zinc-950">
+
+        <Header title="Gabriel Tech" subtitle="Frontend Developer · React · JavaScript"/>
+
+        <main className="flex-grow px-6 py-10 space-y-10 prose dark:prose-invert">
+          
+          <ReactMarkdown>{content}</ReactMarkdown>
+
+        </main>
+
+        <Footer />
+      </div>
     )
 }
