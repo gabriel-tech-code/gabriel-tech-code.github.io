@@ -25,7 +25,7 @@ export default function Resume() {
     
       <div className="flex flex-col min-h-screen bg-zinc-100 dark:bg-zinc-950">
 
-        <Header title="Gabriel Tech" subtitle="Frontend Developer · React · JavaScript"/>
+        <Header title="Welcome to My Resume" subtitle="Building, Learning, and Leveling Up"/>
 
         <main className="flex-grow px-6 py-10 space-y-10 prose dark:prose-invert">
           

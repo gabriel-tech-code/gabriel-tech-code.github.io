@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-zinc-100 dark:bg-zinc-950">
 
-      <Header title="Gabriel Garcia's Portfolio" subtitle="Building, Learning, and Leveling Up"/>
+      <Header title="Welcome to My Homepage" subtitle="Building, Learning, and Leveling Up"/>
 
       <main className="flex-grow px-6 py-10 space-y-10">
 
