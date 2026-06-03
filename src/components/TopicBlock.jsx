@@ -1,13 +1,24 @@
-export default function TopicBlock({ title, children }) {
+export default function TopicBlock({ title, children, center = false }) {
   return (
-    <div className="space-y-2">
-      <h2 className="text-xl font-bold text-red-600 dark:text-cyan-400">
+    <div className={`space-y-2 ${center ? "text-center" : ""}`}>
+      <h2
+        className={`
+          text-xl font-bold underline
+          text-red-600 dark:text-cyan-400
+          ${center ? "mx-auto" : ""}
+        `}
+      >
         {title}
       </h2>
 
-      <p className="text-zinc-800 dark:text-zinc-300">
+      <div
+        className={`
+          prose dark:prose-invert max-w-none
+          ${center ? "mx-auto prose-p:text-center prose-ul:text-center prose-ol:text-center" : ""}
+        `}
+      >
         {children}
-      </p>
+      </div>
     </div>
   );
 }

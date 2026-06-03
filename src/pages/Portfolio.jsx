@@ -4,7 +4,6 @@ import ReactMarkdown from "react-markdown";
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import BodyGrid from '../components/BodyGrid'
-import CyanLogo from '../assets/images/Cyan_Logo.png'
 import TopicBlock from '../components/TopicBlock'
 
 export default function Portfolio() {
