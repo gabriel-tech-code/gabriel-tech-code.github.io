@@ -45,7 +45,7 @@ export default function Resume() {
               <p><b>Software Developer | Cybersecurity Student </b></p>
               <p>
                 San Benito, Texas - 
-                <a href="www.linkedin.com/in/gabriel-garcia-tech"> Gabriel's LinkedIn</a> - 
+                <a href="https://linkedin.com/in/gabriel-garcia-tech"> Gabriel's LinkedIn</a> - 
                 <a href="https://github.com/gabriel-tech-code"> Gabriel's GitHub</a>
               </p>
             </TopicBlock>
