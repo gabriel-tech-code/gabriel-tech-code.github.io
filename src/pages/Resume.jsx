@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import { SiTailwindcss } from 'react-icons/si'
-import { FaGithub, FaReact } from 'react-icons/fa'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
