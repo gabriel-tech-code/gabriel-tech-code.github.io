@@ -1,26 +1,17 @@
-import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
-
+import { Link } from "react-router-dom"
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import BodyGridGray from '../components/BodyGridGray'
 import TopicBlock from '../components/TopicBlock'
+import MarkdownReader from "../components/MarkdownReader"
+import RevatureLogo from '../assets/images/Rev-logo.png'
+import TSTCLogo from '../assets/images/TSTC_Logo.png'
+import UTRGVLogo from '../assets/images/UTRGV_Logo.jpg'
+import LotusLogo from '../assets/images/Lotus_Logo.png'
 
-
-export default function Resume() {
+export default function Portfolio() {
   
 
-  const [content, setContent] = useState("");  
-
-  const url = `https://raw.githubusercontent.com/gabriel-tech-code/content/main/profiles/resume.md`;
-
-  useEffect(() => {
-    fetch(url)
-      .then(res => res.text())
-      .then(text => setContent(text))
-      .catch(() => setContent("# Error\nCould not load content."));
-  }, [url]);
-  
   return (
     
       <div className="flex flex-col min-h-screen bg-zinc-100 dark:bg-zinc-950">
@@ -53,16 +44,91 @@ export default function Resume() {
         <BodyGridGray
           cols={1}
           items={[
-            <div className="w-full max-w-3xl prose dark:prose-invert justify-self-center">
-              <ReactMarkdown>{content}</ReactMarkdown>
-            </div>
+            <topicBlock title="">
+              <MarkdownReader url="https://raw.githubusercontent.com/gabriel-tech-code/content/main/profiles/revature_short.md" />,
+                          
+              <div className="flex gap-2 text-red-600 dark:text-cyan-400 ">
+                <Link to="/revature" className="block w-fit">
+                  <img
+                    src={RevatureLogo}
+                    alt="Revature Logo"
+                    className="w-20 h-auto transition-transform duration-200 rounded-xl hover:scale-105"
+                  />
+                </Link>
+                <div >
+                  <h3 className="text-lg font-bold">Revature</h3>
+                  <p className="text-sm text-zinc-400">
+                    Software development experience and team projects.
+                  </p>
+                </div>
+              </div>         
+            </topicBlock>
           ]}
         />
-        
-
-
-
-
+        {/* Third section */}
+        <BodyGridGray
+          cols={1}
+          items={[
+            <div className="dark:prose-invert">
+              <MarkdownReader url="https://raw.githubusercontent.com/gabriel-tech-code/content/main/profiles/school_short.md" />,
+            
+              <div className="flex items-center gap-2 text-red-600 dark:text-cyan-400">
+                <Link to="/revature" className="block w-fit">
+                  <img
+                    src={TSTCLogo}
+                    alt="Texas State Technical College Logo"
+                    className="w-20 h-auto transition-transform duration-200 rounded-xl hover:scale-105"
+                  />
+                </Link>
+                <div>
+                  <h3 className="text-lg font-bold">Texas State Technical College</h3>
+                  <p className="text-sm text-zinc-400">
+                    Academic projects and coursework in Video Game Simulation & Development and Cybersecurity.
+                  </p>
+                </div>
+              </div>,
+              <div className="flex items-center gap-2 text-red-600 dark:text-cyan-400">
+                <Link to="/revature" className="block w-fit">
+                  <img
+                    src={UTRGVLogo}
+                    alt="University of Texas Rio Grande Valley Logo"
+                    className="w-20 h-auto transition-transform duration-200 rounded-xl hover:scale-105"
+                  />
+                </Link>
+                <div>
+                  <h3 className="text-lg font-bold">University of Texas Rio Grande Valley </h3>
+                  <p className="text-sm text-zinc-400">
+                    Academic projects and coursework in Computer Science.
+                  </p>
+                </div>
+              </div>
+            </div>            
+          ]}
+        />
+        {/* Fourth section */}
+        <BodyGridGray
+          cols={1}
+          items={[
+            <div className="dark:prose-invert">
+              <MarkdownReader url="https://raw.githubusercontent.com/gabriel-tech-code/content/main/profiles/self_projects_short.md" />,
+            
+              <div className="flex items-center gap-2 text-red-600 dark:text-cyan-400">
+              <Link to="/revature" className="block w-fit">
+                <img
+                  src={LotusLogo}
+                  alt="Lotus Logo"
+                  className="w-20 h-auto transition-transform duration-200 rounded-xl hover:scale-105"
+                />
+              </Link>
+              <div>
+                <p className="text-sm text-zinc-400">
+                  Software development projects driven by personal interest and continuous learning, showcasing a range of technologies and creative problem-solving.
+                </p>
+              </div>
+            </div>
+            </div>            
+          ]}
+        />
 
         </main>
 
