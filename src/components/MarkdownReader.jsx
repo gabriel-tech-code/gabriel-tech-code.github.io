@@ -24,7 +24,7 @@ export default function MarkdownReader({ url }) {
   }, [url]);
 
   return (
-    <div className="max-w-3xl prose dark:prose-invert">
+    <div className="max-w-full prose dark:prose-invert">
       {error ? (
         <ReactMarkdown>{content}</ReactMarkdown>
       ) : (
