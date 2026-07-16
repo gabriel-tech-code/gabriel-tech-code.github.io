@@ -73,7 +73,7 @@ export default function Portfolio() {
               <MarkdownReader url="https://raw.githubusercontent.com/gabriel-tech-code/content/main/profiles/school_short.md" />,
             
               <div className="flex items-center gap-2 text-red-600 dark:text-cyan-400">
-                <Link to="/revature" className="block w-fit">
+                <Link to="/projects/TSTC" className="block w-fit">
                   <img
                     src={TSTCLogo}
                     alt="Texas State Technical College Logo"
@@ -88,7 +88,7 @@ export default function Portfolio() {
                 </div>
               </div>,
               <div className="flex items-center gap-2 text-red-600 dark:text-cyan-400">
-                <Link to="/revature" className="block w-fit">
+                <Link to="/projects/UTRGV" className="block w-fit">
                   <img
                     src={UTRGVLogo}
                     alt="University of Texas Rio Grande Valley Logo"

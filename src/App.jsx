@@ -22,7 +22,7 @@ export default function App() {
         <Route path="/tstc" element={<TSTC />} />
         <Route path="/utrgv" element={<UTRGV />} />
         <Route path="/projects" element={<Projects />} />
-
+        <Route path="/projects/:file" element={<Projects />} />
       </Routes>
     </div>
   );
