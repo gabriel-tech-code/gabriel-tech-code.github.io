@@ -4,8 +4,8 @@ import Footer from '../components/Footer'
 import BodyGridGray from '../components/BodyGridGray'
 import TopicBlock from '../components/TopicBlock'
 import MarkdownReader from "../components/MarkdownReader"
-import RevatureLogo from '../assets/images/Rev-logo.png'
-import TSTCLogo from '../assets/images/TSTC_Logo.png'
+import RevatureLogo from '../assets/images/Rev_logo.png'
+import TSTCLogo from '../assets/images/TSTC_logo.png'
 import UTRGVLogo from '../assets/images/UTRGV_Logo.jpg'
 import LotusLogo from '../assets/images/Lotus_Logo.png'
 
